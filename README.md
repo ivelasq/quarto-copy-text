@@ -95,6 +95,10 @@ Requires modern browsers with Clipboard API support (Chrome 76+, Firefox 63+, Sa
 
 - Quarto >= 1.2.0
 
+## Acknowledgements
+
+Special thanks to [Emil Hvitfeldt](https://github.com/EmilHvitfeldt) for his guidance in developing this extension.
+
 ## License
 
 MIT
