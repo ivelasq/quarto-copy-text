@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.\\(css|js|lua|html\\)$\")",
+      "Bash(quarto render *)",
+      "Bash(open *)",
+      "Read(//Users/isabella.velasquez/rpy/**)",
+      "Bash(mv quarto-copy-chunk *)"
+    ]
+  }
+}

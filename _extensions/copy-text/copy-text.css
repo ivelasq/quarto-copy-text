@@ -1,0 +1,26 @@
+.copy {
+  position: relative;
+  border: 1px solid #dee2e6;
+  padding: 1.5rem 1rem 1rem 1rem;
+  /* Extra top padding for the button */
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  margin-bottom: 1rem;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background: #e9ecef;
+}

@@ -1,0 +1,41 @@
+---
+title: "Copy Text Extension - Examples"
+format:
+  html:
+    css: _extensions/copy-text/copy-text.css
+    include-after-body: _extensions/copy-text/copy-logic.html
+filters:
+  - copy-text
+---
+
+# Copy Text Extension Demo
+
+This document demonstrates the `copy-text` Quarto extension. Each copyable section has a light gray background with a "Copy" button in the top-right corner. Click any "Copy" button to copy the content to your clipboard!
+
+## Basic Text
+
+::: copy
+This is a simple paragraph that can be copied with a single click.
+:::
+
+## Formatted Content
+
+::: copy
+**Bold text**, *italic text*, and [clickable links](https://quarto.org) all copy with their formatting preserved.
+:::
+
+## Use Cases
+
+Perfect for blog posts where you want readers to share pre-written content:
+
+::: copy
+
+Positron Notebook Editor (alpha) is here! Custom-built Jupyter experience with batteries-included IDE features + context-aware AI. No extensions needed. Built for data science from the ground up. <https://posit.co/blog/announcing-the-positron-notebook-editor/>
+
+:::
+
+Make installation commands easy to copy:
+
+::: copy
+`pip install great-tables`
+:::
