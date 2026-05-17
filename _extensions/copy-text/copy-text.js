@@ -1,12 +1,15 @@
 function copyDivToClipboard(id) {
   const el = document.getElementById(id);
+  // We need to clone to avoid copying the button text itself
   const clone = el.cloneNode(true);
   const btn = clone.querySelector('.copy-btn');
   if (btn) btn.remove();
 
+  // Get both HTML and plain text
   const htmlContent = clone.innerHTML.trim();
   const textContent = clone.innerText.trim();
 
+  // Use the Clipboard API to write both HTML and plain text
   const clipboardItem = new ClipboardItem({
     'text/html': new Blob([htmlContent], { type: 'text/html' }),
     'text/plain': new Blob([textContent], { type: 'text/plain' })
