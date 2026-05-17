@@ -1,0 +1,6 @@
+# Schema for the copy-text extension
+$schema: https://m.canouil.dev/quarto-wizard/assets/schema/v1/extension-schema.json
+
+classes:
+  copy:
+    description: "Wraps a Div so its content can be copied to the clipboard via a button rendered in the top-right corner."
