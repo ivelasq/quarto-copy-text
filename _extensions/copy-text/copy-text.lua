@@ -1,17 +1,35 @@
 -- copy-text.lua
+local deps_added = false
+
+local function ensure_deps()
+  if deps_added then return end
+  deps_added = true
+  quarto.doc.add_html_dependency({
+    name = "copy-text",
+    version = "1.0.0",
+    stylesheets = { "copy-text.css" },
+    scripts = {
+      { path = "copy-text.js", afterBody = true }
+    }
+  })
+end
+
 function Div(el)
-  if el.classes:includes("copy") then
-    -- We wrap the content in a div with a unique ID and add a button
-    local id = "copy-block-" .. table.concat(el.classes, "-") .. math.random(1000)
-    el.identifier = id
+  if not el.classes:includes("copy") then return nil end
+  if not quarto.doc.is_format("html:js") then return nil end
 
-    local button_html = string.format(
-      '<button class="copy-btn" onclick="copyDivToClipboard(\'%s\')">Copy</button>',
-      id
-    )
+  ensure_deps()
 
-    -- Insert the button at the start of the div
-    table.insert(el.content, 1, pandoc.RawBlock('html', button_html))
-    return el
-  end
+  -- We wrap the content in a div with a unique ID and add a button
+  local id = "copy-block-" .. tostring(math.random(100000))
+  el.identifier = id
+
+  local button_html = string.format(
+    '<button class="copy-btn" onclick="copyDivToClipboard(\'%s\')">Copy</button>',
+    id
+  )
+
+  -- Insert the button at the start of the div
+  table.insert(el.content, 1, pandoc.RawBlock("html", button_html))
+  return el
 end

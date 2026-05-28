@@ -1,4 +1,3 @@
-<script>
 function copyDivToClipboard(id) {
   const el = document.getElementById(id);
   // We need to clone to avoid copying the button text itself
@@ -24,4 +23,3 @@ function copyDivToClipboard(id) {
     console.error('Failed to copy: ', err);
   });
 }
-</script>

@@ -1,10 +1,11 @@
 .copy {
   position: relative;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--bs-border-color, #dee2e6);
   padding: 1.5rem 1rem 1rem 1rem;
   /* Extra top padding for the button */
-  border-radius: 6px;
-  background-color: #f8f9fa;
+  border-radius: var(--bs-border-radius, 6px);
+  background-color: var(--bs-tertiary-bg, #f8f9fa);
+  color: var(--bs-emphasis-color, #212529);
   margin-bottom: 1rem;
 }
 
@@ -15,12 +16,13 @@
   font-size: 0.75rem;
   padding: 2px 8px;
   cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: white;
+  border: 1px solid var(--bs-border-color, #ccc);
+  border-radius: var(--bs-border-radius-sm, 4px);
+  background: var(--bs-body-bg, white);
+  color: var(--bs-body-color, inherit);
   transition: all 0.2s;
 }
 
 .copy-btn:hover {
-  background: #e9ecef;
+  background: var(--bs-secondary-bg, #e9ecef);
 }

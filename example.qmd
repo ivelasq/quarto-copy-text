@@ -1,9 +1,6 @@
 ---
 title: "Copy Text Extension - Examples"
-format:
-  html:
-    css: _extensions/copy-text/copy-text.css
-    include-after-body: _extensions/copy-text/copy-logic.html
+format: html
 filters:
   - copy-text
 ---
