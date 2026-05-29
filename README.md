@@ -49,7 +49,7 @@ This text can be copied with a single click!
 
 ## Examples
 
-See [example.qmd](example.qmd) for a live demonstration, or run:
+See [here](https://ivelasq-copy-text-extension.share.connect.posit.cloud/) for a live demonstration, or run:
 
 ```bash
 quarto render example.qmd
